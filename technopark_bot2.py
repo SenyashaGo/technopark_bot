@@ -341,16 +341,16 @@ async def photo_handler(message: types.Message, state: FSMContext):
     answer2 = data.get("answer2")
     answer3 = data.get("answer3")
     answer4 = data.get("answer4")
-    if os.path.exists(f"/Users/senyashago/Desktop/PythonWork/Бот мамина работа/{answer1}") == False:
-        os.makedirs(f"/Users/senyashago/Desktop/PythonWork/Бот мамина работа/{answer1}")
-    if os.path.exists(f"/Users/senyashago/Desktop/PythonWork/Бот мамина работа/{answer1}/{answer2}") == False:
-        os.makedirs(f"/Users/senyashago/Desktop/PythonWork/Бот мамина работа/{answer1}/{answer2}")
-    if os.path.exists(f"/Users/senyashago/Desktop/PythonWork/Бот мамина работа/{answer1}/{answer2}/{answer3}") == False:
-        os.makedirs(f"/Users/senyashago/Desktop/PythonWork/Бот мамина работа/{answer1}/{answer2}/{answer3}")
-    if os.path.exists(f"/Users/senyashago/Desktop/PythonWork/Бот мамина работа/{answer1}/{answer2}/{answer3}/{answer4}") == False:
-        os.makedirs(f"/Users/senyashago/Desktop/PythonWork/Бот мамина работа/{answer1}/{answer2}/{answer3}/{answer4}")
+    if os.path.exists(f"C://Users//Administrator//technopark_bot//ФОТО//{answer1}") == False:
+        os.makedirs(f"C://Users//Administrator//technopark_bot//ФОТО//{answer1}")
+    if os.path.exists(f"C://Users//Administrator//technopark_bot//ФОТО//{answer1}//{answer2}") == False:
+        os.makedirs(f"C://Users//Administrator//technopark_bot//ФОТО//{answer1}//{answer2}")
+    if os.path.exists(f"C://Users//Administrator//technopark_bot//ФОТО//{answer1}//{answer2}//{answer3}") == False:
+        os.makedirs(f"C://Users//Administrator//technopark_bot//ФОТО//{answer1}//{answer2}//{answer3}")
+    if os.path.exists(f"C://Users//Administrator//technopark_bot//ФОТО//{answer1}//{answer2}//{answer3}//{answer4}") == False:
+        os.makedirs(f"C://Users//Administrator//technopark_bot//ФОТО//{answer1}//{answer2}//{answer3}//{answer4}")
     photo = message.photo.pop()
-    await photo.download(f'/Users/senyashago/Desktop/PythonWork/Бот мамина работа/{answer1}/{answer2}/{answer3}/{answer4}/')
+    await photo.download(f'C://Users//Administrator//technopark_bot//ФОТО//{answer1}//{answer2}//{answer3}//{answer4}//')
     # await bot.send_photo(admin_chat_id, photo=message.photo[-1].file_id)
     
 
@@ -383,7 +383,7 @@ async def enter_meinfo(message: types.Message):
     elif int(message.chat.id) == int(admin_chat_id):
         chat_text = message.text.split(': ')[0]
         if chat_text == 'выгрузка' or chat_text == 'Выгрузка':
-            mesto = "/Users/senyashago/Desktop/PythonWork/Бот мамина работа/" + message.text.split(': ')[1] + '/photos/'
+            mesto = "C://Users//Administrator//technopark_bot//ФОТО//" + message.text.split(': ')[1] + '/photos/'
             for filename in os.listdir(mesto):
                 await bot.send_photo(admin_chat_id, photo=open(f'{mesto}{filename}', 'rb'))
 
