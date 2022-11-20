@@ -73,21 +73,12 @@ d14 = types.KeyboardButton("17 ноября")
 d15 = types.KeyboardButton("18 ноября")
 d16 = types.KeyboardButton("19 ноября")
 back0 = types.KeyboardButton("Отмена")
-date_button.add(d1)
-date_button.add(d2)
-date_button.add(d3)
-date_button.add(d4)
-date_button.add(d5)
-date_button.add(d6)
-date_button.add(d7)
-date_button.add(d8)
-date_button.add(d9)
-date_button.add(d10)
-date_button.add(d11)
-date_button.add(d12)
-date_button.add(d13)
-date_button.add(d14)
-date_button.add(d15)
+
+
+
+
+
+
 date_button.add(d16)
 date_button.add(back0)
 
